@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Client Enquiry</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="section">
+  <h2>Client Case Enquiry</h2>
+
+  <!-- INTRO INFO -->
+  <p class="section-intro">
+    Please fill out the form below to request a legal consultation. 
+    Our office will review your enquiry and contact you within 24 working hours.
+  </p>
+
+  <!-- CONFIDENTIAL NOTE -->
+  <p class="confidential-note">
+    🔒 All information shared here is strictly confidential and protected.
+  </p>
+
+  <form id="clientForm">
+    <input type="text" placeholder="Client Name *" required>
+
+    <input type="tel" placeholder="Phone Number *" required>
+
+    <input type="email" placeholder="Email Address">
+
+    <select required>
+      <option value="">Select Case Type *</option>
+      <option>Civil Case</option>
+      <option>Criminal Case</option>
+      <option>Family Case</option>
+      <option>Property Dispute</option>
+    </select>
+
+    <textarea placeholder="Brief Case Details"></textarea>
+
+    <button type="submit">Submit Enquiry</button>
+  </form>
+
+  <!-- RESPONSE INFO -->
+  <p class="response-note">
+    ⏱️ Our legal team will respond within 24 hours.
+  </p>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
