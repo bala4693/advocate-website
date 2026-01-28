@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: advocate-website
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
