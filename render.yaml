@@ -1,1 +1,7 @@
-plan: free
+services:
+  - type: web
+    name: advocate-website
+    env: static
+    buildCommand: ""
+    startCommand: ""
+    staticPublishPath: .
