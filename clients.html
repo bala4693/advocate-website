@@ -3,29 +3,147 @@
 <head>
   <title>Client Enquiry</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #eef2f9;
+      color: #222;
+      margin: 0;
+    }
+
+    .section {
+      max-width: 850px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 45px 40px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #1a237e;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      text-align: center;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .confidential-note {
+      background: rgba(92,107,192,0.1);
+      border-left: 5px solid #5c6bc0;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    input, select, textarea {
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #5c6bc0;
+      box-shadow: 0 0 0 2px rgba(92,107,192,0.25);
+    }
+
+    textarea { resize: none; }
+
+    .two-col {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #5c6bc0, #3f51b5);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #3f51b5, #283593);
+    }
+
+    .response-note {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #444;
+      background: #f7f8ff;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    /* Image banner */
+    .banner {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .banner img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .two-col { flex-direction: column; }
+      .section { margin: 30px 15px; padding: 30px 20px; }
+      .section h2 { font-size: 26px; }
+    }
+  </style>
 </head>
+
 <body>
 
 <section class="section">
+  <div class="banner">
+    <img src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg" alt="Client Consultation">
+  </div>
+
   <h2>Client Case Enquiry</h2>
 
-  <!-- INTRO INFO -->
   <p class="section-intro">
-    Please fill out the form below to request a legal consultation. 
-    Our office will review your enquiry and contact you within 24 working hours.
+    Please complete the form below to request a legal consultation.  
+    Providing detailed information helps us prepare effectively and offer you the best guidance.
   </p>
 
-  <!-- CONFIDENTIAL NOTE -->
   <p class="confidential-note">
-    🔒 All information shared here is strictly confidential and protected.
+    🔒 All information shared here is strictly confidential and protected under attorney-client privilege.
   </p>
 
   <form id="clientForm">
-    <input type="text" placeholder="Client Name *" required>
+    <input type="text" placeholder="Full Name *" required>
 
-    <input type="tel" placeholder="Phone Number *" required>
+    <div class="two-col">
+      <input type="tel" placeholder="Phone Number *" required>
+      <input type="email" placeholder="Email Address *" required>
+    </div>
 
-    <input type="email" placeholder="Email Address">
+    <input type="text" placeholder="City / Location">
 
     <select required>
       <option value="">Select Case Type *</option>
@@ -33,16 +151,39 @@
       <option>Criminal Case</option>
       <option>Family Case</option>
       <option>Property Dispute</option>
+      <option>Corporate / Business Case</option>
+      <option>Tax / Compliance</option>
+      <option>Intellectual Property</option>
     </select>
 
-    <textarea placeholder="Brief Case Details"></textarea>
+    <select>
+      <option value="">Case Urgency</option>
+      <option>Normal</option>
+      <option>Urgent</option>
+      <option>Emergency</option>
+    </select>
+
+    <select>
+      <option value="">Preferred Consultation Mode</option>
+      <option>Phone Call</option>
+      <option>Email</option>
+      <option>Video Call</option>
+      <option>In-Person Meeting</option>
+    </select>
+
+    <textarea rows="5" placeholder="Brief Case Details (include dates, parties involved, and current status)"></textarea>
+
+    <input type="file" accept=".pdf,.doc,.docx,.jpg,.png">
+
+    <label style="font-size:14px; color:#444;">
+      <input type="checkbox" required> I confirm that the information provided is accurate and I consent to its use for legal consultation.
+    </label>
 
     <button type="submit">Submit Enquiry</button>
   </form>
 
-  <!-- RESPONSE INFO -->
   <p class="response-note">
-    ⏱️ Our legal team will respond within 24 hours.
+    ⏱️ Our legal team will respond within 24 hours with next steps and consultation details.
   </p>
 </section>
 

@@ -1,10 +1,195 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>About Us</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #f4f6fb;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      padding: 14px;
+      text-align: center;
+    }
+    .navbar a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+      background: rgba(255,255,255,0.18);
+    }
+
+    /* HERO */
+    .about-hero {
+      position: relative;
+      background: url(https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg) center/cover no-repeat;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+    .about-overlay {
+      background: rgba(0,0,0,0.65);
+      width: 100%;
+      padding: 60px 20px;
+    }
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      color: #fff;
+      text-align: center;
+    }
+    .about-content h1 {
+      font-size: 38px;
+      margin-bottom: 25px;
+    }
+    .about-content h3 {
+      color: #ffd700;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    .about-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      color: #f1f1f1;
+    }
+
+    /* DETAILS */
+    .section {
+      padding: 80px 20px;
+    }
+    .about-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .about-text p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 18px;
+    }
+    .about-text strong {
+      color: #1f2a7c;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    /* VALUES */
+    .values {
+      background: #f9fafc;
+      text-align: center;
+    }
+    .values h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #203a43;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .value-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .value-box h3 {
+      color: #2c5364;
+      margin-bottom: 10px;
+    }
+
+    /* TEAM */
+    .team {
+      background: #ffffff;
+      text-align: center;
+    }
+    .team h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #203a43;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .team-member {
+      background: #f4f6fb;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .team-member h3 {
+      margin-bottom: 8px;
+      color: #2c5364;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(90deg, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .cta h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    .cta a {
+      display: inline-block;
+      background: #ffd700;
+      color: #222;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #e6c200;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -16,27 +201,14 @@
   <a href="contact.html">Contact Us</a>
 </nav>
 
-<!-- ABOUT HERO -->
+<!-- HERO -->
 <section class="about-hero">
   <div class="about-overlay">
     <div class="about-content">
-      <span class="icon">⚖️</span>
       <h1>Delivering Strategic Legal Solutions<br>To Achieve Your Goals</h1>
-
       <h3>Our Approach</h3>
-      <p>
-        Advocate Kumar Law Office is a trusted legal practice committed to providing
-        high-quality legal services with integrity, professionalism, and dedication.
-        We focus on understanding each client’s unique legal needs and delivering
-        effective legal strategies to achieve the best possible outcomes.
-      </p>
-
-      <p>
-        With over <strong>12 years of legal experience</strong>, our advocates have successfully
-        handled a wide range of civil, criminal, and family law matters. We guide our
-        clients confidently through complex legal challenges while ensuring transparency
-        and clear communication at every stage.
-      </p>
+      <p>Advocate JANA Law Office is a trusted legal practice committed to providing high-quality legal services with integrity, professionalism, and dedication.</p>
+      <p>With over <strong>12 years of legal experience</strong>, our advocates have successfully handled a wide range of civil, criminal, and family law matters.</p>
     </div>
   </div>
 </section>
@@ -44,32 +216,47 @@
 <!-- ABOUT DETAILS -->
 <section class="section about-details">
   <div class="about-grid">
-
     <div class="about-text">
-      <p>
-        Our legal team provides thoughtful and result-oriented legal services backed
-        by extensive courtroom experience. We specialize in civil law, criminal law,
-        family law, and property disputes, serving individuals and businesses alike.
-      </p>
-
-      <p>
-        We have successfully represented over <strong>1500+ clients</strong> and maintain a
-        strong commitment to justice and ethical practice. To support individuals
-        facing financial difficulties, we also offer free legal guidance in deserving cases.
-      </p>
-
-      <p>
-        We understand that legal matters can be stressful and overwhelming. Our mission
-        is to stand by our clients with clarity, compassion, and strong legal advocacy.
-      </p>
+      <p>Our legal team provides thoughtful and result-oriented legal services backed by extensive courtroom experience.</p>
+      <p>We have successfully represented over <strong>1500+ clients</strong> and maintain a strong commitment to justice and ethical practice.</p>
+      <p>We understand that legal matters can be stressful and overwhelming. Our mission is to stand by our clients with clarity, compassion, and strong legal advocacy.</p>
     </div>
-
     <div class="about-image">
-      <img src="images/advocate.jpg" alt="Advocate Office">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGfwMBvyNO8cIhYzByPsD-iZpq8eaL3-aOA&s" alt="Advocate Office">
     </div>
-
   </div>
 </section>
 
-</body>
-</html>
+<!-- VALUES -->
+<section class="section values">
+  <h2>Our Core Values</h2>
+  <div class="values-grid">
+    <div class="value-box">
+      <h3>Integrity</h3>
+      <p>We uphold honesty and transparency in every case we handle.</p>
+    </div>
+    <div class="value-box">
+      <h3>Commitment</h3>
+      <p>Our team is dedicated to achieving the best outcomes for our clients.</p>
+    </div>
+    <div class="value-box">
+      <h3>Compassion</h3>
+      <p>We provide empathetic support during challenging legal journeys.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team">
+  <h2>Meet Our Team</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="https://via.placeholder.com/200" alt="Advocate 1">
+      <h3>Advocate JANA</h3>
+      <p>Founder & Senior Counsel with 12+ years of experience in civil and criminal law.</p>
+    </div>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/200" alt="Advocate 2">
+      <h3>Advocate Priya</h3>
+      <p>Specialist in family law and property disputes, known for compassionate client advocacy.</p>
+   
